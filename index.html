@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:yellow;">
+<head>
+	<meta charset="utf-8"/>
+	
+	<title>메인페이지</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+
+	<style type="text/css">
+		html{font-family: 'noto', sans-serif;}
+		body{overflow:hidden;font-family: noto;}
+		img{ width: 100%; }
+		a{display: block;height:500px;}
+		section{ width:1920px; position: relative;}
+ 		#sectionA{ height: 1080px; background-color: #282828;}
+		#intro{ width:900px; height:250px; overflow:hidden; position: absolute;left:105px; top:105px;color: white; text-align: left; font-size: 1.2em; line-height: 180%;}
+		#intro2{ width:100px; height:300px; overflow:hidden; position: absolute;left:105px; top:350px;color: white; text-align: left; font-size: 1.2em; line-height: 300%;}
+
+		#ruler2{transform: rotate(-90deg); position: absolute; top:110px; left:-950px;}
+
+
+		#number1{ width:21px; height:30px; background:url(./img/number1.png); background-size: 100% auto; position: absolute;left:184px; top:363px;}
+		#number2{ width:22px; height:30px; background:url(./img/number2.png); background-size: 100% auto; position: absolute;left:224px; top:362px;}
+		#number3{ width:21px; height:30px; background:url(./img/number3.png); background-size: 100% auto; position: absolute;left:264px; top:363px;}
+		#number4{ width:21px; height:30px; background:url(./img/number4.png); background-size: 100% auto; position: absolute;left:304px; top:363px;}
+		#number5{ width:21px; height:30px; background:url(./img/number5.png); background-size: 100% auto; position: absolute;left:344px; top:363px;}
+		#number6{ width:21px; height:30px; background:url(./img/number6.png); background-size: 100% auto; position: absolute;left:384px; top:363px;}
+		#number7{ width:21px; height:30px; background:url(./img/number7.png); background-size: 100% auto; position: absolute;left:424px; top:363px;}
+		#number8{ width:21px; height:30px; background:url(./img/number8.png); background-size: 100% auto; position: absolute;left:184px; top:423px;}
+		#number9{ width:21px; height:30px; background:url(./img/number9.png); background-size: 100% auto; position: absolute;left:224px; top:423px;}
+		#number10{ width:35px; height:30px; background:url(./img/number10.png); background-size: 100% auto; position: absolute;left:184px; top:483px;}
+/*여기는 오른쪽부분 마크*/
+		
+		#number100{ width:21px; height:30px; background:url(./img/number1.png); background-size: 100% auto; position: absolute;left:750px; top:260px;}
+		#number200{ width:22px; height:30px; background:url(./img/number2.png); background-size: 100% auto; position: absolute;left:970px; top:280px;}
+		#number300{ width:21px; height:30px; background:url(./img/number3.png); background-size: 100% auto; position: absolute;left:1200px; top:240px;}
+		#number400{ width:21px; height:30px; background:url(./img/number4.png); background-size: 100% auto; position: absolute;left:1420px; top:300px;}
+		#number500{ width:21px; height:30px; background:url(./img/number5.png); background-size: 100% auto; position: absolute;left:1640px; top:310px;}
+		#number600{ width:21px; height:30px; background:url(./img/number6.png); background-size: 100% auto; position: absolute;left:530px; top:520px;}
+		#number700{ width:21px; height:30px; background:url(./img/number7.png); background-size: 100% auto; position: absolute;left:755px; top:623px;}
+		#number800{ width:21px; height:30px; background:url(./img/number8.png); background-size: 100% auto; position: absolute;left:1050px; top:590px;}
+		#number900{ width:21px; height:30px; background:url(./img/number9.png); background-size: 100% auto; position: absolute;left:970px; top:800px;}
+		#number1000{ width:35px; height:30px; background:url(./img/number10.png); background-size: 100% auto; position: absolute;left:1380px; top:780px;}
+		
+
+
+
+
+		#menua{ width:138px; height:250px; overflow:hidden;background: blue; position: absolute;left:780px; top:280px;}
+		#menub{ width:138px; height:238px; overflow:hidden;background: blue;  position: absolute;left:1000px; top:300px;}
+		#menuc{ width:138px; height:270px; background: url(./img/menuc.jpg); background-size: 100% auto; position: absolute; left:1230px; top:260px;}
+		#menud{ width:138px; height:400px; background: url(./img/menud.jpg); background-size: 100% auto; position: absolute; left:1450px; top:310px;}
+		#menue{ width:138px; height:270px;  background: url(./img/menue.jpg); background-size: 100% auto; position: absolute; left:1670px; top:340px;}
+		#menuf{ width:138px; height:300px; background: url(./img/menuf.jpg); background-size: 100% auto; position: absolute; left:560px; top:530px;}
+		#menug{ width:138px; height:245px; background: url(./img/g.jpg); background-size: 100% auto; position: absolute; left:785px; top:653px;}
+		
+		#solve{ width:230px; height:130px; background:url(./img/hurry.jpg); background-size: 100% auto; position: absolute; left:1080px; top:600px;}
+
+		#menuh{ width:230px; height:130px; background:url(./img/menuh.jpg); background-size: 100% auto; position: absolute; left:1000px; top:800px;}
+		#menui{ width:138px; height:140px; background:url(./img/menui.jpg); background-size: 100% auto; position: absolute; left:1430px; top:800px;}
+
+		
+
+		.cover{ width:100%; position: absolute; z-index: 9999;}
+		#cover{ opacity: 0.8; background:black; }
+		#coverImg{width:800px; display: block; left:calc(50% - 400px); position: absolute; top:300px; animation: coverAni 2s infinite alternate;}
+
+		@keyframes coverAni{
+			to{ transform: rotate3d(0.3,0.3,0,20deg); }
+		}
+
+		@font-face { font-family: 'noto'; src: url(./noto.otf) format('opentype'); }
+
+/*이거는 맥에 노토산스 깔았을때의 얘기
+@font-face {
+  font-family: webisfree;
+  src: { local('webisfree'),
+    url('/fonts/webisfree.ttf');}}
+*/
+	</style>
+</head>
+<body>
+
+	<section id="sectionA">
+	
+	<div id="intro">누군가를 비하하고, 쉽게 대하는 이들이 있다. 함부로 상처주는 말들을 하며 다른 사람의 자존감을 낮춘다</br>‘역시 쟤보다 내가 잘난 인간이야’ 를 속으로 말하며  자신의 원동력으로 쓰는 이들, 바로 자존감도둑이다</br>본 사이트에는 자존감 도둑의 유형과 그들에게 대처하는 방법들이 정리되어 있다</br> <I>페이지 이곳 저곳을 눌러보면 그들에 대해 좀 더 조사해 볼 수 있다! </I> </div>
+
+	<div id="intro2">
+		유형</br>해결책</br>출처
+	</div>
+
+<marquee id="ruler" behavior="scroll" direction="right" scrollamount="8"loop="">
+    <img src="./img/ruler.png" width="1920px" height="20px" alt="Natural" />
+    <img src="./img/ruler.png" width="1920px" height="20px" alt="Natural" />
+    <img src="./img/ruler.png" width="1920px" height="20px" alt="Natural" />
+  </marquee>
+
+  <marquee id="ruler2" behavior="scroll" direction="right" scrollamount="8" loop="">
+    <img src="./img/ruler.png" width="1920px" height="20px" alt="Natural" />
+    <img src="./img/ruler.png" width="1920px" height="20px" alt="Natural" />
+    <img src="./img/ruler.png" width="1920px" height="20px" alt="Natural" />
+  </marquee>
+
+	<div id="number1">
+		<a href="./menua.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number2">
+		<a href="./menub.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number3">
+		<a href="./menuc.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number4">
+		<a href="./menud.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number5">
+		<a href="./menue.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number6">
+		<a href="./menuf.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number7">
+		<a href="./menug.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number8">
+		<a href="./solve.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number9">
+		<a href="./menuh.html" style="width:100%; height:30px"></a>
+	</div>
+	<div id="number10">
+		<a href="./menuf.html" style="width:100%; height:30px"></a>
+	</div>
+
+
+<div id="number100"></div>
+<div id="number200"></div>
+<div id="number300"></div>
+<div id="number400"></div>
+<div id="number500"></div>
+<div id="number600"></div>
+<div id="number700"></div>
+<div id="number800"></div>
+<div id="number900"></div>
+<div id="number1000"></div>
+<div id="number1100"></div>
+
+
+	<div id="menua">
+		<a href="./menua.html">
+			<img src="./img/menua.jpg">
+		</a>
+	</div>
+
+	<div id="menub">
+		<a href="./menub.html">
+			<img src="./img/menub.jpg">
+		</a>
+	</div>
+
+	<div id="menuc">
+		<a href="./menuc.html" style="width:100%; height:450px"></a>
+	</div>
+
+	<div id="menud">
+		<a href="./menud.html" style="width:100%; height:450px"></a>
+	</div>
+
+	<div id="menue">
+		<a href="./menue.html" style="width:100%; height:250px"></a>
+	</div>
+
+	<div id="menuf">
+		<a href="./menuf.html" style="width:100%; height:250px"></a>
+	</div>
+
+	<div id="menug">
+		<a href="./menug.html" style="width:100%; height:250px"></a>
+	</div>
+
+	<div id="solve">
+		<a href="./solve.html" style="width:100%; height:130px"></a>
+	</div>
+
+	<div id="menuh">
+		<a href="./menuh.html" style="width:100%; height:130px"></a>
+	</div>
+
+	<div id="menui">
+		<a href="./menui.html" style="width:100%; height:140px"></a>
+	</div>
+
+
+
+
+
+	<div class="cover" id="cover"></div>
+	<img class="cover" id="coverImg" src="./img/logo4.svg">
+</section>
+	<script type="text/javascript">
+		cover.style.height = window.innerHeight + "px";
+		cover.style.display = "none";
+		coverImg.style.display = "none";
+		var t=0;
+		var k = setInterval(function(){
+			t++;
+			if(t > 30){
+				cover.style.display = "block";
+				coverImg.style.display = "block";
+			}else{
+				cover.style.display = "none";
+				coverImg.style.display = "none";
+			}
+		},100);
+		window.onmousemove = function(){
+			t=0;
+		}
+
+
+	</script>
+</body>
+</html>
